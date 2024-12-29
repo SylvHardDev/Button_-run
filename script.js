@@ -21,6 +21,7 @@ container.addEventListener("mousemove", (event) => {
     let newLeft = button.offsetLeft + offsetX;
     let newTop = button.offsetTop + offsetY;
 
+    
     // Gérer les limites de la fenêtre
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
