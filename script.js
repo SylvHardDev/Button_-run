@@ -1,6 +1,7 @@
 const button = document.getElementById("magicButton");
 const container = document.querySelector(".container");
 
+
 container.addEventListener("mousemove", (event) => {
   const buttonRect = button.getBoundingClientRect();
   const mouseX = event.clientX;
