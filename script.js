@@ -1,6 +1,7 @@
 const button = document.getElementById("magicButton");
 const container = document.querySelector(".container");
 
+
 container.addEventListener("mousemove", (event) => {
   const buttonRect = button.getBoundingClientRect();
   const mouseX = event.clientX;
@@ -21,7 +22,7 @@ container.addEventListener("mousemove", (event) => {
     let newLeft = button.offsetLeft + offsetX;
     let newTop = button.offsetTop + offsetY;
 
-    
+
     // Gérer les limites de la fenêtre
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
