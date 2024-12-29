@@ -70,6 +70,7 @@ body {
 
 /* Ajoutez d'autres span selon le même schéma jusqu'à atteindre 20 */
 
+
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
