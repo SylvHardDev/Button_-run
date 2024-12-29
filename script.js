@@ -9,8 +9,8 @@ container.addEventListener("mousemove", (event) => {
   const buttonX = buttonRect.left + buttonRect.width / 2;
   const buttonY = buttonRect.top + buttonRect.height / 2;
 
-  // const distanceX = Math.abs(mouseX - buttonX);
-  // const distanceY = Math.abs(mouseY - buttonY);
+  const distanceX = Math.abs(mouseX - buttonX);
+  const distanceY = Math.abs(mouseY - buttonY);
 
   const threshold = 100; // Distance à partir de laquelle le bouton commence à fuir.
 
