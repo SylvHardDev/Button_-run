@@ -1,13 +1,3 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
-}
-
 .container {
   position: relative;
   width: 100%;
@@ -17,6 +7,7 @@ body {
 
 #magicButton {
   position: absolute;
+  z-index: 100;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -34,4 +25,53 @@ body {
   background-color: #0056b3;
 }
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
 
+.background {
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  background: #121213;
+}
+.background span {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Particules individuelles */
+.background span:nth-child(1) {
+  color: #583C87;
+  top: 30%;
+  left: 50%;
+  animation-duration: 16s;
+  animation-delay: -8s;
+  transform-origin: -10vw 10vh;
+  box-shadow: 40vmin 0 15vmin currentColor;
+}
+
+.background span:nth-child(2) {
+  color: #E45A84;
+  top: 70%;
+  left: 30%;
+  animation-duration: 12s;
+  animation-delay: -6s;
+  transform-origin: 15vw -20vh;
+  box-shadow: -40vmin 0 10vmin currentColor;
+}
+
+/* Ajoutez d'autres span selon le même schéma jusqu'à atteindre 20 */
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
